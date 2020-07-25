@@ -1,6 +1,3 @@
-all: aslib.so runit
-	@ :
-
 run: aslib.so ffi-test.rkt run_as_ctorbin.exe run_as_bin.exe run_as_lib.exe
 	@echo running ocaml binary
 	./run_as_bin.exe
