@@ -5,7 +5,9 @@ run: aslib.so ffi-test.rkt run_as_ctorbin.exe run_as_bin.exe run_as_lib.exe
 	./run_as_ctorbin.exe
 	@echo running ocaml binary via lib
 	./run_as_lib.exe
-	@echo running via racket
+	@echo running via racket with GC disabled
+	env PLTDISABLEGC=1 racket ffi-test.rkt
+	@echo running via racket with GC enabled
 	racket ffi-test.rkt
 
 doubler.cmx: doubler.ml
