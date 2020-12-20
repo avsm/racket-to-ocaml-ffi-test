@@ -38,7 +38,7 @@ run_as_lib.exe: prog.o aslib.o main_lib.o
 	cc -fPIC -g -o $@ $^ -L`ocamlc -where` -lasmrun_pic -lm -ldl
 	
 aslib.so: aslib.o prog.o
-	cc -fPIC -o $@ $^ -shared -L`ocamlc -where` -lasmrun_pic -lm -ldl
+	cc -fPIC -g -o $@ $^ -shared -L`ocamlc -where` -lasmrun_pic -lm -ldl
 
 clean:
 	rm -f *.o *.so *.cmx *.exe *.cmi

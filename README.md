@@ -1,1 +1,3 @@
 This is a test repository to try interfacing Racket with the OCaml runtime via C.
+
+It seems to segfault on Racket BC but not Racket CS (tested with 3.9).  Still investigating...
